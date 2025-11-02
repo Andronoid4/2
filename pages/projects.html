@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио - Проекты</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <div class="nav-brand">
+                <div class="logo">
+                    <img src="/images/logo.png" alt="Логотип">
+                </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../pages/projects.html" class="active">Проекты</a></li>
+                <li><a href="../pages/diary.html">Дневник</a></li>
+                <li><a href="../pages/contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="projects-section">
+            <div class="section-header">
+                <h1>Мои проекты</h1>
+                <div class="filter-buttons">
+                    <button class="filter-btn active">Все</button>
+                    <button class="filter-btn">HTML</button>
+                    <button class="filter-btn">JS</button>
+                    <button class="filter-btn">React</button>
+                </div>
+            </div>
+
+            <div class="projects-grid-large">
+                <div class="project-card-large" data-category="html">
+                    <div class="project-image"></div>
+                    <h3>Личный сайт</h3>
+                    <p>HTML, CSS</p>
+                </div>
+                <div class="project-card-large" data-category="js">
+                    <div class="project-image"></div>
+                    <h3>Todo-приложение</h3>
+                    <p>JavaScript</p>
+                </div>
+                <div class="project-card-large" data-category="react">
+                    <div class="project-image"></div>
+                    <h3>Интернет-магазин</h3>
+                    <p>React</p>
+                </div>
+                <div class="project-card-large" data-category="bootstrap">
+                    <div class="project-image"></div>
+                    <h3>Портфолио</h3>
+                    <p>Bootstrap</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Контакты</p>
+        </div>
+    </footer>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Название проекта</h2>
+            <p id="modalDescription">Описание проекта</p>
+            <div class="modal-links">
+                <a href="#" class="btn-secondary">Живая версия</a>
+                <a href="#" class="btn-secondary">Исходный код</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../scripts/main.js"></script>
+</body>
+</html>

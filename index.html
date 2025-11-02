@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио - Главная</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Логотип">
+                </div>
+                <span class="student-name">Алипян Андраник</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Главная</a></li>
+                <li><a href="pages/projects.html">Проекты</a></li>
+                <li><a href="pages/diary.html">Дневник</a></li>
+                <li><a href="pages/contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Привет! Я студент<br>группы ЭФБО-18-24</h1>
+                <p>Занимаюсь веб-разработкой</p>
+                <a href="assets/resume.pdf" download class="btn-primary">Скачать резюме</a>
+            </div>
+            <div class="hero-image">
+                <div class="photo-placeholder">
+                    <img src="images/photo.jpg" alt="Фото студента">
+                </div>
+            </div>
+        </section>
+
+        <!-- Остальной контент без изменений -->
+        <section class="skills-section">
+            <div class="section-card">
+                <h2>Мои навыки</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <span>HTML/CSS</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span>JavaScript</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span>Bootstrap</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span>React</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 60%"></div>
+                        </div>
+                        <span>60%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-preview">
+            <div class="section-card">
+                <h2>Лучшие проекты</h2>
+                <div class="projects-grid">
+                    <div class="project-card">П1</div>
+                    <div class="project-card">П2</div>
+                    <div class="project-card">П3</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Контакты</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
