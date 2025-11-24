@@ -2,96 +2,116 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Портфолио - Главная</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="nav-brand">
-                <div class="logo">
-                    <img src="images/logo.png" alt="Логотип">
-                </div>
-                <span class="student-name">Алипян Андраник</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="active">Главная</a></li>
-                <li><a href="pages/projects.html">Проекты</a></li>
-                <li><a href="pages/diary.html">Дневник</a></li>
-                <li><a href="pages/contacts.html">Контакты</a></li>
-            </ul>
-        </nav>
-    </header>
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
 
-    <main class="container">
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Привет! Я студент<br>группы ЭФБО-18-24</h1>
-                <p>Занимаюсь веб-разработкой</p>
-                <a href="assets/resume.pdf" download class="btn-primary">Скачать резюме</a>
-            </div>
-            <div class="hero-image">
+    <div class="page">
+        <header class="header" role="banner">
+            <nav class="navbar" aria-label="Основная навигация">
+                <div class="nav-brand">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="Логотип" class="logo-image responsive-image">
+                    </div>
+                    <span class="student-name">Алипян Андраник</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active" aria-current="page">Главная</a></li>
+                    <li><a href="pages/projects.html">Проекты</a></li>
+                    <li><a href="pages/diary.html">Дневник</a></li>
+                    <li><a href="pages/contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main" class="main container" role="main">
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Привет! Я студент<br>группы ЭФБО-18-24</h1>
+                    <p>Занимаюсь веб-разработкой</p>
+                    <a href="assets/resume.pdf" download class="btn-primary">Скачать резюме</a>
+                </div>
                 <div class="photo-placeholder">
-                    <img src="images/photo.jpg" alt="Фото студента">
+                    <img src="images/photo.jpg" .
+                        alt="Фотография студента Алипяна Андраника"
+                        class="student-photo responsive-image"
+                        loading="lazy">
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Остальной контент без изменений -->
-        <section class="skills-section">
-            <div class="section-card">
-                <h2>Мои навыки</h2>
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <span>HTML/CSS</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
+            <section class="skills-section" aria-labelledby="skills-heading">
+                <div class="section-card">
+                    <h2 id="skills-heading">Мои навыки</h2>
+                    <div class="skills-grid">
+                        <div class="skill-item" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="90">
+                            <span>HTML/CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%">
+                                    <span class="visually-hidden">90%</span>
+                                </div>
+                            </div>
+                            <span>90%</span>
                         </div>
-                        <span>90%</span>
-                    </div>
-                    <div class="skill-item">
-                        <span>JavaScript</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%"></div>
+                        <div class="skill-item" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80">
+                            <span>JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%">
+                                    <span class="visually-hidden">80%</span>
+                                </div>
+                            </div>
+                            <span>80%</span>
                         </div>
-                        <span>80%</span>
-                    </div>
-                    <div class="skill-item">
-                        <span>Bootstrap</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
+                        <div class="skill-item" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85">
+                            <span>Bootstrap</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%">
+                                    <span class="visually-hidden">85%</span>
+                                </div>
+                            </div>
+                            <span>85%</span>
                         </div>
-                        <span>85%</span>
-                    </div>
-                    <div class="skill-item">
-                        <span>React</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 60%"></div>
+                        <div class="skill-item" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60">
+                            <span>React</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 60%">
+                                    <span class="visually-hidden">60%</span>
+                                </div>
+                            </div>
+                            <span>60%</span>
                         </div>
-                        <span>60%</span>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="projects-preview">
-            <div class="section-card">
-                <h2>Лучшие проекты</h2>
-                <div class="projects-grid">
-                    <div class="project-card">П1</div>
-                    <div class="project-card">П2</div>
-                    <div class="project-card">П3</div>
+            <section class="projects-preview" aria-labelledby="projects-heading">
+                <div class="section-card">
+                    <h2 id="projects-heading">Лучшие проекты</h2>
+                    <div class="projects-grid">
+                        <article class="project-card">
+                            <div class="project-image-container">
+                                <img src="images/project1.jpg" alt="Проект Mr. Boom - игровое приложение с котиком" class="project-image responsive-image" loading="lazy">
+                                <div class="project-overlay">
+                                    <span class="project-tech">HTML, CSS</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Mr. Boom</h3>
+                            </div>
+                        </article>
+                    </div>
                 </div>
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 Контакты</p>
-        </div>
-    </footer>
+        <footer class="footer" role="contentinfo">
+            <div class="footer-content">
+                <p>&copy; 2025 Алипян Андраник</p>
+            </div>
+        </footer>
+    </div>
 
     <script src="scripts/main.js"></script>
 </body>
