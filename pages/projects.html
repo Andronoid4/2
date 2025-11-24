@@ -2,72 +2,73 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Портфолио - Проекты</title>
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-          <div class="nav-brand">
-                <div class="logo">
-                    <img src="/images/logo.png" alt="Логотип">
-                </div>
-            <ul class="nav-menu">
-                <li><a href="../index.html">Главная</a></li>
-                <li><a href="../pages/projects.html" class="active">Проекты</a></li>
-                <li><a href="../pages/diary.html">Дневник</a></li>
-                <li><a href="../pages/contacts.html">Контакты</a></li>
-            </ul>
-        </nav>
-    </header>
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
 
-    <main class="container">
-        <section class="projects-section">
-            <div class="section-header">
-                <h1>Мои проекты</h1>
-                <div class="filter-buttons">
-                    <button class="filter-btn active">Все</button>
-                    <button class="filter-btn">HTML</button>
-                    <button class="filter-btn">JS</button>
-                    <button class="filter-btn">React</button>
+    <div class="page">
+        <header class="header" role="banner">
+            <nav class="navbar" aria-label="Основная навигация">
+                <div class="nav-brand">
+                    <div class="logo">
+                        <img src="../images/logo.png" alt="Логотип" class="logo-image responsive-image">
+                    </div>
+                    <span class="student-name">Алипян Андраник</span>
                 </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Главная</a></li>
+                    <li><a href="../pages/projects.html" class="active" aria-current="page">Проекты</a></li>
+                    <li><a href="../pages/diary.html">Дневник</a></li>
+                    <li><a href="../pages/contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main" class="main container" role="main">
+            <section class="projects-section" aria-labelledby="projects-heading">
+                <div class="section-header">
+                    <h1 id="projects-heading">Мои проекты</h1>
+                    <div class="filter-buttons" role="group" aria-label="Фильтры проектов">
+                        <button class="filter-btn active" aria-pressed="true">Все</button>
+                        <button class="filter-btn" aria-pressed="false">HTML</button>
+                        <button class="filter-btn" aria-pressed="false">JS</button>
+                        <button class="filter-btn" aria-pressed="false">React</button>
+                    </div>
+                </div>
+
+                <div class="projects-grid-large">
+                    <article class="project-card-large" data-category="html" tabindex="0" role="article">
+                        <img src="../images/project1.jpg" alt="Личный сайт - HTML, CSS" class="project-image responsive-image" loading="lazy">
+                        <h3>Личный сайт</h3>
+                        <p>HTML, CSS</p>
+                    </article>
+                    <article class="project-card-large" data-category="js" tabindex="0" role="article">
+                        <img src="../images/project2.jpg" alt="Todo-приложение - JavaScript" class="project-image responsive-image" loading="lazy">
+                        <h3>Todo-приложение</h3>
+                        <p>JavaScript</p>
+                    </article>
+                    <article class="project-card-large" data-category="react" tabindex="0" role="article">
+                        <img src="../images/project3.jpg" alt="Интернет-магазин - React" class="project-image responsive-image" loading="lazy">
+                        <h3>Интернет-магазин</h3>
+                        <p>React</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer" role="contentinfo">
+            <div class="footer-content container">
+                <p>&copy; 2025 Алипян Андраник</p>
             </div>
+        </footer>
+    </div>
 
-            <div class="projects-grid-large">
-                <div class="project-card-large" data-category="html">
-                    <div class="project-image"></div>
-                    <h3>Личный сайт</h3>
-                    <p>HTML, CSS</p>
-                </div>
-                <div class="project-card-large" data-category="js">
-                    <div class="project-image"></div>
-                    <h3>Todo-приложение</h3>
-                    <p>JavaScript</p>
-                </div>
-                <div class="project-card-large" data-category="react">
-                    <div class="project-image"></div>
-                    <h3>Интернет-магазин</h3>
-                    <p>React</p>
-                </div>
-                <div class="project-card-large" data-category="bootstrap">
-                    <div class="project-image"></div>
-                    <h3>Портфолио</h3>
-                    <p>Bootstrap</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 Контакты</p>
-        </div>
-    </footer>
-
-    <div id="projectModal" class="modal">
+    <div id="projectModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDescription" tabindex="-1">
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <button class="close" aria-label="Закрыть модальное окно">&times;</button>
             <h2 id="modalTitle">Название проекта</h2>
             <p id="modalDescription">Описание проекта</p>
             <div class="modal-links">
